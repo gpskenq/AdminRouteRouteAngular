@@ -12,6 +12,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar'
 import { LoginComponent } from './login/login.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -31,6 +33,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
+    MatMenuModule,
+    MatToolbarModule,
     FlexLayoutModule
   ],
   providers: [],
