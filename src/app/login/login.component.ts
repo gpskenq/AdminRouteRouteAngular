@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClientService } from '../http-client.service';
 
 export class PrivateAPIKeySet {
   constructor(public key: string, public secret: string) {}
@@ -12,11 +13,15 @@ export class PrivateAPIKeySet {
 export class LoginComponent implements OnInit {
   keySet = new PrivateAPIKeySet('', '');
   hide = true;
-  constructor() {}
+  constructor(private httpClientService: HttpClientService) {}
 
   ngOnInit() {}
 
   onSubmit() {
-    console.log(this.keySet);
+    console.log(this.keySet); 
+
+    var loginInfo = new LoginInfo(this.keySet.key, this.keySet.secret);
+    
+    this.httpClientService.postLogin(loginInfo);
   }
 }
